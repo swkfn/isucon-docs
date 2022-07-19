@@ -11,6 +11,7 @@
 
 - [リンクまとめ](docs/links.md)
 - [ISUCON + GitHub SSH](docs/authorization.md)
+- [nginx](docs/nginx.md)
 
 ## Script
 

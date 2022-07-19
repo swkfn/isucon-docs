@@ -34,8 +34,8 @@ log_reset: ## logファイルを初期化する
 
 .PHONY: alp
 alp: ## alpのログを見る (make alp ALP_ARG="")
-	@sudo cat $(NGINX_LOG) | alp json --sort avg -r $(ALP_ARG)
-	@sudo cat $(NGINX_LOG) | alp json --sort avg -r $(ALP_ARG) > $(LOG)/alp/$(NOW)
+	@sudo cat $(NGINX_LOG) | alp ltsv --sort avg -r $(ALP_ARG)
+	@sudo cat $(NGINX_LOG) | alp ltsv --sort avg -r $(ALP_ARG) > $(LOG)/alp/$(NOW)
 
 .PHONY: slow
 slow: ## スロークエリを見る
