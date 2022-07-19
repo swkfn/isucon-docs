@@ -1,6 +1,19 @@
-## ISUCON Docs
+# ISUCON Docs
 
-ISUCON で参考にする個人的手順書。
+チーム aryd （あらやだ）の ISUCON 対策本部
 
-- [SSH と GitHub](./docs/authorization.md)
+## メンバ
 
+- [swkfn](https://github.com/swkfn)
+- [ganyariya](https://github.com/ganyariya)
+
+## Docs
+
+- [リンクまとめ](docs/links.md)
+- [ISUCON + GitHub SSH](docs/authorization.md)
+
+## Script
+
+- [Tools DL & Install](./script/install_tools.sh)
+  - [alp](https://github.com/tkuchiki/alp)
+  - [pt-query-digest](https://github.com/percona/percona-toolkit)
