@@ -14,6 +14,10 @@
 
 ## Script
 
+- [オペレーション](./script/Makefile)
+  - よくやるオペレーションをまとめるファイル
 - [Tools DL & Install](./script/install_tools.sh)
   - [alp](https://github.com/tkuchiki/alp)
   - [pt-query-digest](https://github.com/percona/percona-toolkit)
+- [指定した branch でベンチを回せる状態にする](./script/deploy.sh)
+
