@@ -6,10 +6,10 @@ echo "cd /home/isucon && \
 git stash && \
 git checkout $BRANCH && \
 git pull origin $BRANCH && \
-make bench"
+make pre-bench"
 
 cd /home/isucon && \
 git stash && \
 git checkout $BRANCH && \
 git pull origin $BRANCH && \
-make bench
+make pre-bench
