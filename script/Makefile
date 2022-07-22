@@ -16,8 +16,8 @@ DB_USER := todo
 DB_PASS := todo
 DB_NAME := todo
 
-NOW := $$(date "+%Y%m%d-%H%M%S")
-LOG := /home/isucon/logs
+NOW:=$(shell date "+%Y%m%d-%H%M%S")
+LOG:=/home/isucon/logs
 
 .PHONY: help
 help: ## show help
@@ -25,10 +25,16 @@ help: ## show help
 		printf "\033[36m%-20s\033[0m %s\n", $$1, $$2 \
 	}'
 
+.PHONY: mk_log_dir
+mk_log_dir:
+	@mkdir -p $(LOG)/mysql_slow_log
+	@mkdir -p $(LOG)/alp
+	@mkdir -p $(LOG)/nginx
+
 .PHONY: log_reset
-log_reset: ## logファイルを初期化する
-	@sudo cp $(MYSQL_SLOW_LOG) > $(LOG)/mysql_slow_log/$(NOW)
-	@sudo cp $(NGINX_LOG) > $(LOG)/nginx/$(NOW)
+log_reset: mk_log_dir ## logファイルを初期化する
+	@sudo cp $(MYSQL_SLOW_LOG) $(LOG)/mysql_slow_log/${NOW}
+	@sudo cp $(NGINX_LOG) $(LOG)/nginx/${NOW}
 	@sudo cp /dev/null $(MYSQL_SLOW_LOG)
 	@sudo cp /dev/null $(NGINX_LOG)
 
